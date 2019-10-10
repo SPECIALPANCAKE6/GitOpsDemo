@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cowsay
+  namespace: demoapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cowsay
+  template:
+    metadata:
+      labels:
+        app: cowsay
+    spec:
+      containers:
+      - name: cowsay
+        image: specialpancake6/gitopsapp
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+ 
