@@ -3,6 +3,9 @@ kind: Deployment
 metadata:
   name: cowsay
   namespace: demoapp
+  annotations:
+       flux.weave.works/tag.cowsay: glob:*
+       flux.weave.works/automated: 'true'
 spec:
   replicas: 4
   selector:
