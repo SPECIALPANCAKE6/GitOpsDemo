@@ -7,7 +7,7 @@ metadata:
        flux.weave.works/tag.cowsay: glob:*
        flux.weave.works/automated: 'true'
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: cowsay
